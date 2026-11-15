@@ -1,0 +1,233 @@
+/* Page Appearance */
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    background-color: #f5f5f5;
+    color: #222;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Logo & Navigation */
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 25px 40px;
+    border-bottom: 2px solid black;
+    background-image: url("../Images/background_image.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+h1{
+    margin: 0;
+    font-size: 36px;
+    font: "Arial Black", Arial, sans-serif;
+    font-weight: 900;
+}
+
+nav{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+nav a{
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 0;
+}
+
+nav a:hover,
+nav a.active{
+    text-decoration: underline;
+}
+
+/* Main Dashboard Styling */
+main{
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 25px 40px;
+}
+
+h2{
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+label{
+    display: block;
+    margin-bottom: 8px;
+}
+
+input[type="date"]{
+    width: 250px;
+    max-width: 100%;
+    padding: 12px;
+    border: 2px solid #555;
+    background-color: white;
+    font: inherit;
+}
+
+#message{
+    color: maroon;
+}
+
+.dashboard-row{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    margin-top: 35px;
+}
+
+h3{
+    margin: 0 0 12px;
+    font-size: 24px;
+}
+
+.summary-box,
+.log-button{
+    display: block;
+    margin: 0;
+    padding: 15px;
+    border: 2px solid #555;
+    background-color: white;
+    font-size: 26px;
+    text-align: center;
+}
+
+.log-button{
+    color: #222;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.log-button:hover{
+    background-color: white;
+}
+
+a:focus-visible,
+input:focus-visible{
+    outline: 3px solid #176b99;
+    outline-offset: 3px;
+}
+
+/* Screen Compatibility */
+@media (max-width: 650px){
+    header{
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    nav{
+        gap: 15px;
+    }
+
+    .dashboard-row{
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+/* Forms */
+.log-form{
+    max-width: 600px;
+    margin-bottom: 25px;
+    padding: 20px;
+    border: 2px solid #555;
+    background-color: white;
+}
+
+.log-form input{
+    display: block;
+    width: 100%;
+    margin-bottom: 18px;
+    padding: 12px;
+    border: 2px solid #555;
+    background-color: white;
+    font: inherit;
+}
+
+.form-buttons,
+.history-filter,
+.entry-actions{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Buttons */
+button{
+    padding: 10px 15px;
+    border: 2px solid #555;
+    background-color: white;
+    color: #222;
+    font: inherit;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #f0f0f0;
+}
+
+button:focus-visible{
+    outline: 3px solid #176b99;
+    outline-offset: 3px;
+}
+
+button:disabled{
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* Entry History */
+.history-filter{
+    margin-bottom: 15px;
+}
+
+.table-container{
+    overflow-x: auto;
+    background-color: white;    
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+th,
+td{
+    padding: 12px;
+    border: 1px solid #999;
+    vertical-align: top;
+}
+
+th{
+    background-color: #f0f0f0;
+}
+
+td{
+    overflow-wrap: anywhere;
+}
+
+/* Puts clear data button at bottom of screen */
+#clearDataButton{
+    position: fixed;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.dashboard-row:last-child{
+    margin-bottom: 80px;
+}

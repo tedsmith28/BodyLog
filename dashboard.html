@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BodyLog | Dashboard</title>
+
+    <link rel="stylesheet" href="CSS/styles.css">
+    <script src="JS/dashboard.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>BodyLog</h1>
+        <nav>
+            <a href="dashboard.html" class="active">Dashboard</a>
+            <a href="foodlog.html">Food Log</a>
+            <a href="weightlog.html">Weight Log</a>
+            <a href="exerciselog.html">Exercise Log</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Daily Overview</h2>
+        
+        <label for="dashboardDate">Select a Date:</label>
+        <input type="date" id="dashboardDate">
+        <p id="message" role="status"></p>
+        <button type="button" id="clearDataButton">Clear All Data</button>
+        <div class="dashboard-row">
+            <section>
+                <h3>Calories Consumed</h3>
+                <p class="summary-box" id="caloriesConsumed">0 Cal</p>
+            </section>
+
+            <section>
+                <h3>Log Food</h3>
+                <a href="foodlog.html" class="log-button" aria-label="Add a food entry">+</a>
+            </section>
+        </div>
+
+        <div class="dashboard-row">
+            <section>
+                <h3>Current Weight</h3>
+                <p class="summary-box" id="currentWeight">- lbs</p>
+            </section>
+
+            <section>
+                <h3>Log Weight</h3>
+                <a href="weightlog.html" class="log-button" aria-label="Add a weight entry">+</a>
+            </section>
+        </div>
+
+        <div class="dashboard-row">
+            <section>
+                <h3>Calories Burned</h3>
+                <p class="summary-box" id="caloriesBurned">0 cal</p>
+            </section>
+
+            <section>
+                <h3>Log Exercise</h3>
+                <a href="exerciselog.html" class="log-button" aria-label="Add an exercise entry">+</a>
+            </section>
+        </div>
+    </main>
+</body>
+</html> 
